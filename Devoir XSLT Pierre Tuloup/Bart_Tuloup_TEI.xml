@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- Version corrigée sur les conseils de Mme Pinche -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="full">Jean Bart et Louis XIV</title>
+            <title type="full">Drames maritimes du XVIIe siècle</title>
+            <title type="full">par Eugène Sue</title>
+            <author><persName>Eugène Sue</persName></author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre du devoir XSLT du Master 2 TNAH</resp>
+               <persName>
+                  <forename>Pierre</forename>
+                  <surname>Tuloup</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Marescq et Compagnie, éditeurs</publisher>
+            <publisher ana="contributeur">Beaucé, Jean Adolphe (1818-1875). Illustrateur</publisher>
+            <pubPlace>3, rue du Pont de Lodi, près le Pont-Neuf, Paris</pubPlace>
+            <date when="1851">1851</date>
+         </publicationStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title type="main">Jean Bart et Louis XIV : drames maritimes du XVIIe siècle / par
+                     Eugène Sue ; édition illustrée... par J.-A. Beaucé</title>
+                  <title type="subtitles">Tome I</title>
+                  <author><name>Eugène Sue</name>
+                     <persName xml:id="Sue">
+                        <forename>Eugène</forename>
+                        <surname>Sue</surname>
+                     </persName></author>
+                  <editor><name>Marescq et Compagnie, éditeurs</name>
+                     <persName xml:id="Marescq">
+                        <surname>Marescq</surname>
+                        <roleName>Editeur scientifique</roleName>
+                     </persName></editor>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>Beaucé, Jean Adolphe (1818-1875). Illustrateur</publisher>
+                  <pubPlace>3, rue du Pont de Lodi, près le Pont-Neuf, Paris</pubPlace>
+                  <date when="1851">1851</date>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k6365618w/f14.item"
+                     >Bibliothèque nationale de France, département Philosophie, histoire, sciences
+                     de l'homme</distributor>
+                  <availability>
+                     <licence>Domaine public</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title>Jean Bart et Louis XIV : drames maritimes du XVIIe siècle / par Eugène Sue
+                     ; édition illustrée... par J.-A. Beaucé</title>
+                  <biblScope unit="page" from="02" to="03">pp. 2-3</biblScope>
+                  <biblScope unit="volume" n="1">vol.1</biblScope>
+               </seriesStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <quotation marks="all"/>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date when="1851">1851</date>
+         </creation>
+         <langUsage>
+            <language ident="fr">Français</language>
+         </langUsage>
+         <textDesc n="novel">
+            <channel mode="w">imprimé</channel>
+            <constitution type="single"/>
+            <derivation type="original"/>
+            <domain type="art"/>
+            <factuality type="fiction"/>
+            <interaction type="none"/>
+            <preparedness type="prepared"/>
+            <purpose type="entertain" degree="high"/>
+            <purpose type="inform" degree="medium"/>
+         </textDesc>
+         <settingDesc>
+            <setting>
+               <name>Dunkerque, France</name>
+               <time>Milieu du 17ème siècle</time>
+            </setting>
+         </settingDesc>
+         <particDesc>
+            <listPerson type="Bart_family">
+               <person xml:id="Cornille-Bart">
+                  <persName>
+                     <forename>Cornille</forename>
+                     <surname>Bart</surname>
+                  </persName>
+               </person>
+               <person xml:id="Jean-Bart">
+                  <persName>
+                     <forename>Jean</forename>
+                     <surname>Bart</surname>
+                  </persName>
+               </person>
+               <person xml:id="Catherine-Janssen">
+                  <persName>
+                     <forename>Catherine</forename>
+                     <surname>Janssen</surname>
+                  </persName>
+               </person>
+               <listRelation>
+                  <relation name="parent" active="#Cornille-Bart" passive="#Jean-Bart"/>
+                  <relation name="parent" active="#Catherine-Janssen" passive="#Jean-Bart"/>
+                  <relation name="enfant" active="#Jean-Bart"
+                     passive="#Cornille-Bart #Catherine-Janssen"/>
+               </listRelation>
+            </listPerson>
+            <listPerson type="OtherPersons">
+               <person sex="homme" xml:id="Haran-Sauret">
+                  <persName>
+                     <forename>Jacques</forename>
+                     <surname>Seyrac</surname>
+                  </persName>
+               </person>
+               <person sex="homme" xml:id="Curé">
+                  <persName>
+                     <surname>M. le Curé de Prince</surname>
+                  </persName>
+                  <occupation>Curé</occupation>
+               </person>
+               <person sex="homme" xml:id="Rembrandt">
+                  <persName>
+                     <surname>Rembrandt</surname>
+                     <roleName>peintre, espion</roleName>
+                  </persName>
+               </person>
+               <listRelation>
+                  <relation name="ami" active="#Jean-Bart #Haran-Sauret"/>
+                  <relation name="capitaine" active="#Cornille-Bart" passive="#Haran-Sauret"/>
+               </listRelation>
+            </listPerson>
+         </particDesc>
+         <settingDesc>
+            <listPlace>
+               <place xml:id="Japon" type="pays">
+                  <placeName>
+                     <country>Japon</country>
+                     <settlement type="pays">Japon</settlement>
+                     <name>Japon</name>
+                  </placeName>
+               </place>
+               <place xml:id="Espagne" type="pays">
+                  <placeName>
+                     <country>Espagne</country>
+                     <settlement type="pays">Espagne</settlement>
+                     <name>Espagne</name>
+                  </placeName>
+               </place>
+               <place xml:id="Bayonne" type="ville">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Bayonne</settlement>
+                     <name>Bayonne</name>
+                  </placeName>
+               </place>
+               <place xml:id="Dunkerque" type="ville">
+                  <placeName>
+                     <country>France</country>
+                     <settlement type="ville">Dunkerque</settlement>
+                     <name>Dunkerque</name>
+                  </placeName>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+   </teiHeader>
+
+   <text>
+      <body xml:lang="fr">
+         <div type="chapter" n="1">
+            <head>Chapitre I</head>
+            <p>Et le groupe s'étant dissipé, <persName ref="#Haran-Sauret">Haran-Sauret</persName>
+               ferma sa porte, fort mécontent des éclats de rire qu'il entendit encore résonner au
+               loin; puis il s'assit sur un escabeau dans le réduit qui précédait la chambre à
+               coucher de maître <persName ref="#Cornille-Bart">Cornille Bart</persName>.</p>
+            <p>
+               <persName ref="#Haran-Sauret">Jacques Seyrac</persName>, natif de <placeName
+                  ref="#ville">Bayonne</placeName>, et dit <persName ref="#Haran-Sauret"
+                  >Haran-Sauret</persName> depuis sa migration dans le Nord, tirait ce surnom de son
+               ancien état de pêcheur de harengs, qu'il avait d'abord exercé à <placeName
+                  ref="#ville">Dunkerque</placeName>, mais qu'il avait abandonné pour s'attacher au
+               sort de <persName ref="#Cornille-Bart">Cornille Bart</persName>, et le suivre dans
+               ses courses contre les Anglais et les Hollandais. <persName ref="#Haran-Sauret"
+                  >Haran-Sauret</persName>, par abréviation <persName ref="#Haran-Sauret"
+                  >Sauret</persName>, était un brave et honnête marin, quelque peu clerc; car, chose
+               assez extraordinaire pour temps, il savait lire fort couramment. Or, cette faculté,
+               jointe à son imagination toute méridionale, en le mettant à même de s'imprégner, pour
+               ainsi dire, des récits mensongers des navigateurs de l'époque, lui avait donné
+               l'envie de les imiter, ce qu'il faisait effrontément lorsqu'il venait à raconter ses
+               voyages océaniques et périlleux, et surtout véridiques, ainsi qu'on l'a vu;
+               d'ailleurs probe, intrépide, et en tout dévoué à son capitaine <persName
+                  ref="#Cornille-Bart">Cornille Bart</persName>.</p>
+            <p> En s'asseyant sur son escabeau, <persName ref="#Haran-Sauret">Sauret</persName>
+               reprit l'intéressante occupation qu'il avait interrompue pour aller donner des
+               nouvelles de son maître : il s'agissait du parachèvement d'une petite galère en
+               miniature qui pouvait vraiment passer pour un chef-d'œuvre car, depuis
+                  l'espalier<note type="gloss" place="bottom">(4) L'espalier, à bord des galères de
+                  premier rang, était un espace carré compris entre le logement du capitaine et les
+                  bancs des rameurs. De chaque côté de l'espalier étaient des balustrades nommées
+                  bandins et bandinets.</note> jusqu'aux bandinets et à la rambarde <note
+                  type="gloss" place="bottom">(5) La rambade était une plate-forme élevée de
+                  quelques pieds au dessus du pont, servant de gaillarde avant aux matelots qui
+                  faisaient la manoeuvre.</note>, tout était imité et exécuté avec une exactitude
+               scrupuleuse. Aussi le vieux marinier s'arrêtait-il de temps en temps pour sourire
+               complaisamment son ouvrage, quoiqu'une seule chose l'affligeât beaucoup. </p>
+            <figure>
+               <!--Contient la description d'une image et deux notes de bas de page correspondant à l'extrait encodé.-->
+               <graphic url="https://gallica.bnf.fr/ark:/12148/bpt6k6365618w/f15.item"/>
+               <head>Dessin : Gravure représentant Michel Jacobsen, par l'illustrateur Beaucé. </head>
+               <!-- balise non adaptée pour une légende => figDesc -->
+               <figDesc>Michel Jacobsen est né en <date when="1560">1560</date> à Dunkerque alors en
+                  Flandre espagnole. Il fait carrière en tant que corsaire et vice amiral pour le
+                  compte du roi d'Espagne, de <date when="1588">1588</date> à <date when="1633"
+                     >1633</date>. C'est l'arrière-grand-père de Jean Bart, lui aussi corsaire né à
+                  Dunkerque et ayant servi le roi de France. Jean Adolphe Beaucé rappelle ici les
+                  liens de parenté entre les deux personnages.</figDesc>
+               <figDesc>Michel Jacobsen, arrière-grand-père de Jean Bart, en habits militaires assis
+                  sur une chaise et fumant sa pipe.</figDesc>
+            </figure>
+            <p>— Les carrosses ou tentes situées à l'arrière des galères étaient ordinairement
+               enrichies des étoffes les plus somptueuses, tandis que le pauvre <persName
+                  ref="#Haran-Sauret">Sauret</persName> sienne, qu'un vieux n'avait, pour couvrir le
+               carrosse de était-il à en- morceau de revesche rouge tout passe. Aussi envier de
+               toutes ses forces un petit coin de la bannière de <persName ref="#Curé">M. le curé de
+                  Prince</persName>, voire même de la splendide étole de <persName ref="#Curé">M. la
+                  paroisse</persName>, pour orner sa galère, lorsque le bruit du sifflet de son
+               maître vint l'arracher à ces sacrilèges et diaboliques tentations.</p>
+            <p>
+               <persName ref="#Haran-Sauret">Sauret</persName> se leva donc précipitamment, ouvrit
+               une portière de lourde tapisserie à dessins bariolés de jaune et de rouge, et se
+               trouva dans la chambre de <persName ref="#Cornille-Bart">Cornille
+               Bart</persName>.</p>
+            <p> Les murs de cet appartement, à solives brunes et saillantes, étaient couverts d'un
+               épais cuir d'<placeName ref="#pays">Espagne</placeName>, sur lequel on voyait encore
+               çà et là quelques traces d'une ancienne dorure. Au fond de cette vaste pièce
+               s'élevait un lit large et massif, et quatre colonnettes de noyer noirci par le temps
+               en soutenaient le dais et les rideaux, faits d'une tapisserie pareille à celle de la
+               portière.</p>
+            <p> Quelques grandes chaises de même étoffe, deux bahuts en ébène sculptée, surmontés de
+               quelques grands vases du <placeName ref="#pays">Japon</placeName>, blancs et bleus,
+               complétaient l'ameublement de cette chambre, carrelée de dalles de faïence de
+               diverses couleurs, et faiblement éclairée par une seule fenêtre haute, longue et
+               étroite, dont les petits carreaux en losanges étaient encadrés dans un grillage de
+               plomb.</p>
+            <p> Les rayons du soleil à son déclin, traversant l'épaisse verdure des lierres et des
+               houblons qui ombrageaient en dehors l'ogive de cette fenêtre, faisaient étinceler ses
+               vitraux, d'où jaillissait une large zone de lumière dorée, tandis que les autres
+               parties de la salle restaient dans cette obscurité si chère aux peintres de l'école
+               de <persName ref="#Rembrandt">Rembrandt</persName>.</p>
+            <p> Assis sur le lit était maître <persName ref="#Cornille-Bart">Cornille
+                  Bart</persName>, homme d'une grande taille, à cheveux blancs et à moustache encore
+               blonde; mais son visage ouvert et fortement dessiné paraissait abattu par la
+               souffrance. Ce capitaine était enveloppé d'un grand surtout d'étamine brune, et
+               appuyait sa tête pâle et amaigrie sur l'épaule d'une femme d'environ quarante ans,
+               vètue d'une robe de laine noire à long corsage, d'une fraise blanche empesée, et
+               d'une espèce - de béguin de velours noir.</p>
+            <p> Aux pieds du blessé s'agenouillait un enfant dont on ne voyait - que les longs
+               cheveux blonds.</p>
+            <p> Cette femme était <persName ref="#Catherine-Janssen">Catherine Janssen</persName>,
+               épouse de maître <persName ref="#Cornille-Bart">Cornille Bart</persName>; cet enfant
+               était leur fils, <persName ref="#Jean-Bart">JEAN BART</persName>.</p>
+            <p>
+               <said who="#Catherine-Janssen" toWhom="#Cornille-Bart">Soutenez-vous sur moi, mon
+                  ami,</said>— dit <persName ref="#Catherine-Janssen">Catherine</persName> à son
+               mari, ne craignez pas de me fatiguer; le physicien a surtout recommandé que vous ne
+               fassiez aucun effort. Toi, <persName ref="#Jean-Bart">Jean</persName>, dépêche vite
+               de chausser les mules à ton père, afin qu'il puisse se lever. Et vous, <persName
+                  ref="#Haran-Sauret">Sauret</persName>, ajouta-t-elle en se tournant vers le vieux
+               marinier, qui attendait tristement des ordres près de la portière, et vous, <persName
+                  ref="#Haran-Sauret">Sauret</persName>, aidez-nous à transporter le maître dans son
+               fauteuil.</p>
+            <p> Ayant chaussé les mules de son père, l'enfant se releva.</p>
+            <p> C'était un robuste garçon d'environ neuf ans, d'une taille moyenne, mais vigoureuse.
+               Son front large, ses sourcils prononcés, ses grands yeux bleus bien fendus et bien
+               vifs, exprimaient une résolution peu commune, tandis que ses bonnes joues rondes,
+               hâlées par le grand air, annonçaient la force et la santé.</p>
+            <p> Enfin, pour terminer dignement ce portrait, nous avouerons que, malgré les soins
+               incessants de mademoiselle <persName ref="#Catherine-Janssen">Catherine
+                  Bart</persName>, le justaucorps et les chausses de son fils témoignaient à leur
+               manière. par maints accrocs plus ou moins récents, témoignaient, dis-je, de la
+               turbulence et de la vivacité du jeune monsieur, ainsi que l'appelait son vieil ami
+                  <persName ref="#Haran-Sauret">Sauret</persName>.</p>
+            <p> Lorsque <persName ref="#Jean-Bart">Jean</persName> eut entendu sa mère parler du
+               grand fauteuil, il courut vers ce meuble et le roula près de la fenêtre, pendant que
+               maître <persName ref="#Cornille-Bart">Cornille Bart</persName>, appuyé sur les bras
+               de sa femme et de <persName ref="#Haran-Sauret">Sauret</persName>, arrivait à pas
+               lents, la taille courbée, la respiration pénible, s'arrêtant çà et 1à, car il ne
+               pouvait parfois réprimer le léger cri que lui arrachait une douleur aiguë.</p>
+            <p> Pendant le siège, <persName ref="#Cornille-Bart">Cornille Bart</persName> avait reçu
+               deux balles de mousquet dans le flanc droit, et l'une d elles n'avait pu être
+               extraite..</p>
+         </div>
+      </body>
+   </text>
+</TEI>
